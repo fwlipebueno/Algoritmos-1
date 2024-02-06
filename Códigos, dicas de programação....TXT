@@ -1,0 +1,58 @@
+- "Padrão":
+#include <stdio.h>
+#include <stdlib.h>
+ 
+int main(){
+  printf("Hello World\n");
+  return 0;
+}//main
+
+
+- Exemplos formatação de saída do printf():
+printf("%10iFIM\n",-1234); // -1234 alinhado direita e dentro de 10 espaços
+printf("%+10iFIM\n",1234); // +indica sinal
+printf("%+010iFIM\n",1234); // 0, entre + e 10, indica preencher com 0s
+printf("%+-10iFIM\n",1234); //+indica sinal e -10 indica alinhado esquerda
+printf("%fFIM\n",1234.112); // padrão 6 casas decimais precisão
+printf("%.2fFIM\n",1234.112); //mostrar 2 casas precisão após o .
+printf("%+.2fFIM\n",1234.112); //+ indica sinal
+printf("%+10.2fFIM\n",1234.112); //alinhamento direita e em 10 espaços
+printf("%xFIM\n",60); //0x3c mostrar em hexadecimal
+printf("%#xFIM\n",60); //0x3c mostrar em hexadecimal com 0x
+
+
+- Tamanho ocupado: sizeof(tipo ou nome_variável):
+int a = 1234567;
+ printf("Um char ocupa %i byte\n", sizeof(char));
+ printf("Um int ocupa %i bytes\n", sizeof(int));
+ printf("A variavel \"a\" ocupa %i bytes\n", sizeof(a));
+ printf("Um float ocupa %i bytes\n", sizeof(float));
+ printf("Um double ocupa %i bytes\n", sizeof(double));
+ printf("Um short int ocupa %i bytes\n", sizeof(short int));
+ printf("Um long int ocupa %i bytes\n", sizeof(long int));
+ printf("Um long double ocupa %i bytes\n", sizeof(long double));
+
+
+- Em C é possível definir constantes simbólicas (define)
+ Também denominada macro.
+ Sintaxe:
+#define NOME valor
+ Exemplo:
+#define PI 3.1416
+ O pré-processador substitui o NOME pelo valor
+ Facilita manuteção de código
+ Variável como constante (const)
+ Sintaxe: const tipo nome_var = valor;
+ Exemplo: const double PI = 3.1415;
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+/* Criação de constantes */
+#define VALOR 10
+#define PI 3.1416
+int main(){
+ printf("Valor da constante N: %d \n", VALOR );
+ printf("Valor da constante PI: %.4f \n", PI );
+}//main
